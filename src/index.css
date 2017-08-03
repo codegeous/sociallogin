@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+    text-align: center;
+}
+
+img {
+    margin: 10px;
+    cursor: pointer;
+}
