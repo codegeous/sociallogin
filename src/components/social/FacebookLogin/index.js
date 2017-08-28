@@ -36,8 +36,7 @@ class FacebookLogin extends Component{
         window.FB.login(
             function(resp){
                 this.statusChangeCallback(resp);
-            }.bind(this)
-        );
+            }.bind(this),{ scope : 'email,user_work_history,user_education_history,user_location,public_profile' });
     }
     
     checkLoginState() {
@@ -73,7 +72,7 @@ class FacebookLogin extends Component{
             console.log( user );
             console.log('Successful login from facebook : ' + user.name);
             alert( 'Successful login for: ' + user.name );
-        },{ scope : 'email,user_work_history,user_education_history,user_location,public_profile' });
+        });
     }
 
     render(){
